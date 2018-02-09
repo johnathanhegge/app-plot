@@ -1,13 +1,13 @@
 {
     "name": "app_plot",
-    "description": "app_plot application for gnuplot",
+    "description": "app_plot application for Gnuplot",
     "author": "jhegge",
     "licensed": true,
     "classifications": [
         "Software Development"
     ],
     "machines": [
-        "*"
+        "n*"
     ],
     "vault-types": [
         "FILE",
@@ -17,31 +17,15 @@
     ],
     "commands": {
         "Batch": {
-            "path": "/usr/bin/gnuplot-wx",
+            "path": "/usr/bin/gnuplot",
             "interactive": false,
             "name": "Batch",
-            "description": "Run gnuplot on sample data",
+            "description": "Run Gnuplot on sample data",
             "parameters": {
-                "-l": {
-                    "name": "-l",
-                    "description": "-l",
-                    "type": "CONST",
-                    "value": "-l",
-                    "positional": true,
-                    "required": true
-                },
-                "-c": {
-                    "name": "-c",
-                    "description": "-c",
-                    "type": "CONST",
-                    "value": "-c",
-                    "positional": true,
-                    "required": true
-                },
-                "command": {
-                    "name": "Command",
-                    "description": "Command to run",
-                    "type": "STR",
+                "commands-file": {
+                    "name": "Commands-file",
+                    "description": "file of Gnuplot commands to run",
+                    "type": "FILE",
                     "positional": true,
                     "required": true
                 }

@@ -4,6 +4,7 @@ RUN curl -H 'Cache-Control: no-cache' \
         https://raw.githubusercontent.com/nimbix/image-common/master/install-nimbix.sh \
         | bash
 
+ADD scripts/gnuplot.commands /tmp/gnuplot.commands
 ADD url.txt /etc/NAE/url.txt
 ADD AppDef.json /etc/NAE/AppDef.json
 
