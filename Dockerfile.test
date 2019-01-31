@@ -2,7 +2,7 @@ FROM nimbix/centos-base:latest
 
 ADD scripts/gnuplot.commands /tmp/gnuplot.commands
 ADD url.txt /etc/NAE/url.txt
-ADD NAE/AppDef.json /etc/NAE/AppDef.json
+ADD NAE/AppDef-test.json /etc/NAE/AppDef.json
 
 RUN yum -y install gnuplot && yum clean all
 
