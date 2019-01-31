@@ -7,7 +7,7 @@
     "Software Development"
   ],
   "machines": [
-    "*"
+    "n0"
   ],
   "vault-types": [
     "FILE",
