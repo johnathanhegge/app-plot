@@ -1,0 +1,9 @@
+FROM nimbix/centos-base:latest
+
+ADD scripts/gnuplot.commands /tmp/gnuplot.commands
+ADD url.txt /etc/NAE/url.txt
+ADD NAE/AppDef.json /etc/NAE/AppDef.json
+
+RUN yum -y install gnuplot && yum clean all
+
+RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice/validate
